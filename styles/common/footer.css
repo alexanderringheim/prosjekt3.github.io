@@ -1,0 +1,52 @@
+#support-button {
+    z-index: 1;
+    position: fixed;
+    bottom: 0px;
+    right: 12vw;
+    padding: 8px;
+    background-color: rgba(2, 2, 2, 0.87);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#support-button img {
+    height: 20px;
+    widows: 20px;
+    margin-right: 5px;
+}
+
+#support-button h3 {
+    margin: 0px;
+    padding: 0px;
+}
+
+.support-chat {
+    display: none;
+    position: fixed;
+    right: 12vw;
+    bottom: 40px;
+    height: 350px;
+    width: 250px;
+
+    z-index: 1;
+
+    background-color: #616161;
+    border: 2px solid gray;
+}
+
+.support-chat-top {
+    height: 25px;
+    width: 100%;
+    background-color: #474747;
+}
+
+.close-support-chat {
+    height: 15px;
+    width: 15px;
+    margin-left: auto;
+    padding: 5px;
+    cursor: pointer;
+}
