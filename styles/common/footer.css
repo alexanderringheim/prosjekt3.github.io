@@ -25,6 +25,7 @@
 
 .support-chat {
     display: none;
+    flex-direction: column;
     position: fixed;
     right: 12vw;
     bottom: 40px;
@@ -49,4 +50,20 @@
     margin-left: auto;
     padding: 5px;
     cursor: pointer;
+}
+
+#skjema {
+    margin-top: auto;
+}
+
+#txtMeldinger {
+    border: 1px solid gray;
+    color: white;
+    height: 300px;
+    overflow: scroll;
+    background-color: #4e4e4e;
+}
+
+#txtMeldinger b {
+    font-size: 18px;
 }

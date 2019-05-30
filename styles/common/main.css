@@ -31,6 +31,7 @@ main {
 .row {
     align-self: center;
     width: 80%;
+    margin-top: 30px;
 
     font-size: 18px;
 
