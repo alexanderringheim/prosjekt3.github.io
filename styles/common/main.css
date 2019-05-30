@@ -9,13 +9,13 @@ main {
 
 .ark {
     width: 75%;
-    padding: 35px;
+    padding-top: 35px;
+    padding-bottom: 35px;
     background-color: whitesmoke;
     border-radius: 3px;
     z-index: 0;
     display: flex;
     flex-direction: column;
-
 }
 
 .center-text {
@@ -23,9 +23,16 @@ main {
     align-self: center;
 }
 
+.center-text p {
+    line-height: 28px;
+    font-size: 18px;
+}
+
 .row {
     align-self: center;
-    width: 85%;
+    width: 80%;
+
+    font-size: 18px;
 
     display: flex;
     flex-direction: row;
@@ -59,16 +66,15 @@ main {
 
 
 
-@media screen and (max-width: 800px)
+@media screen and (max-width: 900px)
 {
     .ark {
-        width: 90%;
+        width: 100%;
     }
 
     @media screen and (max-width: 400px)
     {
-        .center-text {
-            width: 300px;
-        }
+        
     }
 }
+

@@ -47,5 +47,58 @@
     justify-self: center;
     width: 90%;
     border-top: 1px solid #5a5a5a;
-    height: 1px;
+}
+
+.dropdown-container .closenav {
+    display: none;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.dropdown-container .closenav img {
+    width: 20px;
+    height: 20px;
+}
+
+@media screen and (max-height: 500px)
+{
+    .dropdown-container {
+        align-self: center;
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        top: 0px;
+        left: 0px;
+        padding: 0px;
+    }
+
+    .dropdown-container .top-link {
+        margin-top: 20px;
+    }
+
+    .dropdown-container .closenav {
+        display: block;
+    }
+
+    .dropdown-container a {
+        align-self: center;
+    }
+
+    .dropdown-container .separator {
+        max-width: 100px;
+        align-self: center;
+    }
+
+    @media screen and (max-height: 400px)
+    {
+        .dropdown-container .top-link {
+            margin-top: 10px;
+        }   
+        .dropdown-container a {
+            align-self: center;
+            padding: 10px;
+        }
+    }
 }
