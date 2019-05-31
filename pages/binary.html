@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Alex prosjekt 3 - Binære tall</title>
+
+    <link rel="icon" href="../images/base/js_logo.png">
+    
+    <link rel="stylesheet" href="../styles/common/body.css">
+    <link rel="stylesheet" href="../styles/common/header.css">
+    <link rel="stylesheet" href="../styles/common/main.css">
+    <link rel="stylesheet" href="../styles/common/footer.css">
+    <link rel="stylesheet" href="../styles/common/navigation.css">
+    
+    <script src="../scripts/window_onclick.js"></script>
+</head>
+<body>
+    
+    <img class="background-image" src="../images/base/background.png" alt="Error">
+    
+    <header>
+        <a href="../images/base/title.png"><img src="../images/base/title.png" alt="Error: Tittel-bilde mangler"
+                style="margin-top: 10px; margin-left: 10px; width: 60px; height: 60px;"></a>
+        <h1 class="title"><a href="../index.html" style="text-decoration: none; color: white;">Online IT-education</a></h1>
+        <h1 class="header-animation">_</h1>
+    
+        <img class="dropdown-button" src="../images/base/nav_icon.png" alt="Meny-knapp" title="Meny">
+    
+        <section class="dropdown-container">
+            <div class="closenav"><img src="../images/base/exitmark.png" alt=""></div>
+            <a href="../index.html" class="top-link">Startside</a>
+            <div class="separator"></div>
+            <a href="binary.html">Binære tall</a>
+            <div class="separator"></div>
+            <a href="bitbyte.html">Bits og Bytes</a>
+            <div class="separator"></div>
+            <a href="imagesvideos.html">Bilder og Video</a>
+            <div class="separator"></div>
+            <a href="sound.html">Lyd</a>
+        </section>
+    </header>
+
+    <main>
+
+        <section class="ark">
+            <section class="column">
+                <h1 style="align-self: center; font-size: 34px; margin-top: 10px;">Det binære tallsystem</h1>
+                <audio src="../sound/prosjektIT2019_index1.mp3" controls></audio>
+                <p>
+                    Det binære talsystem (eller binær kode), er eit system designa for datamaskinar. Det binære talsystemet består
+                    kun av to tegn fra det vanlege talsystemet (0 - 9), 0 og 1. Desse tala, 0 og 1 representerer to formar,
+                    strøm <u><i>på</i></u> (1) og strøm <u><i>av</i></u> (0). Dette er fordi datamaskina forstår berre desse to formane.
+                    Å veksle mellom det binære talsystemet og standard talsystem er ganske enkelt. Prosessen består av enkle addisjonar i
+                    ein tabell. På denne nettsida vil du finna ein kalkulator som oversette vanlege tal til binær kode for deg.
+                </p>
+                <a class="right" style="margin-right: auto;" href="../images/content/binary_green.jpg">
+                    <img src="../images/content/binary_green.jpg" alt="Image of the binary system">
+                    <br>
+                    <i>Binær kode</i>
+                </a>
+                <p>
+                    Sidan me og brukar tegn som ikkje er tal, er det og eit system for å gjera tal om til bokstavar og andre tegn.
+                    Til dette brukar me det me kallar eit tegnsystem. Eit tegnsystem gjer alle bokstavar ei kvar si verdi som kan gjerast om
+                    til binærkode,
+                    og når desse vert brukt vil datamaskina sjå den binære koden til den verdien. Det mest vanlege tensystemet i dag er
+                    UTF-8 (8-bits Unicode Transformation Format). Dette systemet er eit 8bits tegnsystem,
+                    noko som tyder at den bruker nok bits til å ha ein verdi til nesten
+                    alle tegn me bruker no i dag, som til dømes æ, ø og å.
+                    Eit eksempel på korleis tegnsystemet funker er å sjå dei tegnverdiane som vert brukt ofte i HTML webdesigning. "&#60" og
+                    "&#62".
+                    I HTML vert desse tegna brukt til å åpna og avslutta taggar, noko som gjer at ein ikkje kan skriva inn dei fysiske tegna
+                    i HTML-dokumentet. Her må man referera til verdien dei har fått av tegnsystemet, i dette tilfellet UTF-8. Då må ein
+                    skriva inn " & # 60" (utan mellomrom) for &#60, og " & # 62" (også utan mellomrom) for &#62. & # 61 gjer tegnet &#61, og
+                    som me
+                    kan sjå, gjer dette oss =. Dette tegnet kan skrivast inn ved å bruka tegnet, men dette viser oss at me kan og bruka
+                    tegnverdien den har
+                    for å få den på skjermen.
+                </p>
+                
+            </section>
+        </section>
+
+    </main>
+
+    <footer class="s-btn" id="support-button">
+        <img class="s-btn" src="../images/base/support.png" alt="">
+        <h3 class="s-btn">Support</h3>
+    </footer>
+    <section class="support-chat">
+    
+        <section class="support-chat-top">
+            <img src="../images/base/exitmark.png" class="close-support-chat" alt="">
+        </section>
+    
+        <article id="txtMeldinger"></article>
+    
+        <form id="skjema">
+    
+            <input type="text" id="inpAvsender" required placeholder="Namn">
+    
+            <input type="text" id="inpMening" required placeholder="Melding">
+    
+            <button type="submit" class="button">OK</button>
+    
+        </form>
+    
+    </section>
+    
+    
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+    
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+             https://firebase.google.com/docs/web/setup#config-web-app -->
+    
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDFcFebf7srGUuxLgZ1nsmsiIYUx1epPJU",
+            authDomain: "prosjekt3-618a9.firebaseapp.com",
+            databaseURL: "https://prosjekt3-618a9.firebaseio.com",
+            projectId: "prosjekt3-618a9",
+            storageBucket: "prosjekt3-618a9.appspot.com",
+            messagingSenderId: "72131199521",
+            appId: "1:72131199521:web:c3748c44971e606c"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <script>
+        let database = firebase.database();
+
+        let meldinger = database.ref("meldinger");
+
+        let skjema = document.getElementById("skjema");
+
+        let inpAvsender = document.getElementById("inpAvsender");
+
+        let inpMening = document.getElementById("inpMening");
+
+        let txtMeldinger = document.getElementById("txtMeldinger");
+
+        function visMelding(snapshot) {
+
+            let melding = snapshot.val();
+
+            let meldingTekst = `<p> <b>${melding.avsender}: </b> <i>${melding.tekst}</i> </p>`;
+
+            txtMeldinger.innerHTML = txtMeldinger.innerHTML + meldingTekst;
+
+        }
+
+        function regNyMelding(evt) {
+
+            evt.preventDefault();
+
+            let nyMelding = {
+
+                avsender: inpAvsender.value,
+
+                tekst: inpMening.value
+
+            };
+
+            meldinger.push(nyMelding);
+
+            inpMening.value = "";
+
+        }
+
+        meldinger.on("child_added", visMelding);
+
+        skjema.onsubmit = regNyMelding;
+    </script>
+</body>
+</html>

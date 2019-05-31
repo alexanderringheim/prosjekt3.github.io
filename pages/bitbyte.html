@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Alex prosjekt 3 - Bit & byte</title>
+
+    <link rel="icon" href="../images/base/js_logo.png">
+
+    <link rel="stylesheet" href="../styles/common/body.css">
+    <link rel="stylesheet" href="../styles/common/header.css">
+    <link rel="stylesheet" href="../styles/common/main.css">
+    <link rel="stylesheet" href="../styles/common/footer.css">
+    <link rel="stylesheet" href="../styles/common/navigation.css">
+
+    <script src="../scripts/window_onclick.js"></script>
+</head>
+
+<body>
+
+    <img class="background-image" src="../images/base/background.png" alt="Error">
+
+    <header>
+        <a href="../images/base/title.png"><img src="../images/base/title.png" alt="Error: Tittel-bilde mangler"
+                style="margin-top: 10px; margin-left: 10px; width: 60px; height: 60px;"></a>
+        <h1 class="title"><a href="../index.html" style="text-decoration: none; color: white;">Online IT-education</a>
+        </h1>
+        <h1 class="header-animation">_</h1>
+
+        <img class="dropdown-button" src="../images/base/nav_icon.png" alt="Meny-knapp" title="Meny">
+
+        <section class="dropdown-container">
+            <div class="closenav"><img src="../images/base/exitmark.png" alt=""></div>
+            <a href="../index.html" class="top-link">Startside</a>
+            <div class="separator"></div>
+            <a href="binary.html">Binære tall</a>
+            <div class="separator"></div>
+            <a href="bitbyte.html">Bits og Bytes</a>
+            <div class="separator"></div>
+            <a href="imagesvideos.html">Bilder og Video</a>
+            <div class="separator"></div>
+            <a href="sound.html">Lyd</a>
+        </section>
+    </header>
+
+    <main>
+
+        <section class="ark">
+            <section class="column">
+                <h1 style="align-self: center; font-size: 34px; margin-top: 10px;">Bits</h1>
+                <audio src="../sound/prosjektIT2019_bits1.mp3" controls></audio>
+                <p>
+                    Ein bit er den minste lagringseiningen på ei datamaskin og representerer lagringe av eit binært siffer, 1 eller 0.
+                    Det er med bits me kan få ut større tal frå ei datamaskin, ved å setta bits i ei rekka.
+                </p>
+                <a href="../images/content/bits.jpg" class="right" style="margin-right: auto;">
+                    <img src="../images/content/bits.jpg" alt="Bilde av bits" style="width: 200px; height: 200px;">
+                    <br>
+                    <i>Rekker med bits</i>
+                </a>
+                <audio src="../sound/prosjektIT2019_bits2.mp3" controls></audio>
+                <p>
+                    Når me har 1 bit har me 2 valg,
+                    1 eller 0. Når me har 2 bits har me 4 val, fordi me skal først velga den første bittens verdi, 1 eller 0, (2 val), og
+                    dermed den andre bittens verdi, 1 eller 0 (2 val). Dette gjer oss 4 ulike val, og det er med denne metoden me kan setta
+                    opp ein tabell for å visa korleis dei større tala vert representert i ei
+                    datamaskin.
+                </p>
+                <p>
+                    Bits er den mest vanlege måten å rekna internett-hastigheit på. For eksempel kan me seie at eit netverk har 50 mega bit
+                    i sekundet hastigheit,
+                    altså netverket har ei hastigheit på 50 000 000 bits i sekundet.
+                </p>
+                <h1 style="align-self: center; font-size: 34px; margin-top: 50px;">Bytes</h1>
+                <audio src="../sound/prosjektIT2019_bytes.mp3" controls></audio>
+                <p>
+                    I ei datamaskin er det ofte lagra mange forskjellige filer. Til dømes <a href="imagesvideos.html">bilder</a>,
+                    <a href="imagesvideos.html">video</a> og <a href="sound.html">lyd</a>. Desse filtypane består alle av
+                    mange ulike bits, men sidan ein bit er ein veldig liten måle eining som kan berre representera små verdiar, brukar
+                    me bytes, når me snakkar om lagring. Bytes er ei samling av fleire bits. 8 bits er 1 byte, og 1 byte kan derfor ha
+                    mange fleir mulige verdiar enn ein bit.
+                </p>
+            </section>
+        </section>
+
+    </main>
+
+    <footer class="s-btn" id="support-button">
+        <img class="s-btn" src="../images/base/support.png" alt="">
+        <h3 class="s-btn">Support</h3>
+    </footer>
+    <section class="support-chat">
+
+        <section class="support-chat-top">
+            <img src="../images/base/exitmark.png" class="close-support-chat" alt="">
+        </section>
+
+        <article id="txtMeldinger"></article>
+
+        <form id="skjema">
+
+            <input type="text" id="inpAvsender" required placeholder="Namn">
+
+            <input type="text" id="inpMening" required placeholder="Melding">
+
+            <button type="submit" class="button">OK</button>
+
+        </form>
+
+    </section>
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+             https://firebase.google.com/docs/web/setup#config-web-app -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDFcFebf7srGUuxLgZ1nsmsiIYUx1epPJU",
+            authDomain: "prosjekt3-618a9.firebaseapp.com",
+            databaseURL: "https://prosjekt3-618a9.firebaseio.com",
+            projectId: "prosjekt3-618a9",
+            storageBucket: "prosjekt3-618a9.appspot.com",
+            messagingSenderId: "72131199521",
+            appId: "1:72131199521:web:c3748c44971e606c"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <script>
+        let database = firebase.database();
+
+        let meldinger = database.ref("meldinger");
+
+        let skjema = document.getElementById("skjema");
+
+        let inpAvsender = document.getElementById("inpAvsender");
+
+        let inpMening = document.getElementById("inpMening");
+
+        let txtMeldinger = document.getElementById("txtMeldinger");
+
+        function visMelding(snapshot) {
+
+            let melding = snapshot.val();
+
+            let meldingTekst = `<p> <b>${melding.avsender}: </b> <i>${melding.tekst}</i> </p>`;
+
+            txtMeldinger.innerHTML = txtMeldinger.innerHTML + meldingTekst;
+
+        }
+
+        function regNyMelding(evt) {
+
+            evt.preventDefault();
+
+            let nyMelding = {
+
+                avsender: inpAvsender.value,
+
+                tekst: inpMening.value
+
+            };
+
+            meldinger.push(nyMelding);
+
+            inpMening.value = "";
+
+        }
+
+        meldinger.on("child_added", visMelding);
+
+        skjema.onsubmit = regNyMelding;
+    </script>
+</body>
+
+</html>

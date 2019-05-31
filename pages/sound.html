@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Alex prosjekt 3 - Sound</title>
+
+    <link rel="icon" href="../images/base/js_logo.png">
+
+    <link rel="stylesheet" href="../styles/common/body.css">
+    <link rel="stylesheet" href="../styles/common/header.css">
+    <link rel="stylesheet" href="../styles/common/main.css">
+    <link rel="stylesheet" href="../styles/common/footer.css">
+    <link rel="stylesheet" href="../styles/common/navigation.css">
+
+    <script src="../scripts/window_onclick.js"></script>
+</head>
+
+<body>
+
+    <img class="background-image" src="../images/base/background.png" alt="Error">
+
+    <header>
+        <a href="../images/base/title.png"><img src="../images/base/title.png" alt="Error: Tittel-bilde mangler"
+                style="margin-top: 10px; margin-left: 10px; width: 60px; height: 60px;"></a>
+        <h1 class="title"><a href="../index.html" style="text-decoration: none; color: white;">Online IT-education</a>
+        </h1>
+        <h1 class="header-animation">_</h1>
+
+        <img class="dropdown-button" src="../images/base/nav_icon.png" alt="Meny-knapp" title="Meny">
+
+        <section class="dropdown-container">
+            <div class="closenav"><img src="../images/base/exitmark.png" alt=""></div>
+            <a href="../index.html" class="top-link">Startside</a>
+            <div class="separator"></div>
+            <a href="binary.html">Binære tall</a>
+            <div class="separator"></div>
+            <a href="bitbyte.html">Bits og Bytes</a>
+            <div class="separator"></div>
+            <a href="imagesvideos.html">Bilder og Video</a>
+            <div class="separator"></div>
+            <a href="sound.html">Lyd</a>
+        </section>
+    </header>
+
+    <main>
+
+        <section class="ark">
+
+            <section class="column">
+
+                <h1 style="font-size: 34px; margin-top: 10px; align-self: center;">Lyd</h1>
+                <audio src="../sound/prosjektIT2019_sound1.mp3" controls></audio>
+                <p>
+                    Lyd oppstår når det skjer små endringar i trykk og skapar lydbølgjer.
+                    I ein lydopptakar som f.eks ein mikrofon er det ein membran inni, som når påvirket av lydbølgjer vil vibrera
+                    ein spole med ein magnet inni. Ein magnet som beveger seg nærme nok ein spole vil skapa elektrisk straum, i dette
+                    tilfellet vert dette brukt som signal som vert sendt til lagringseinheite. Til høgare lyd til meir vil magneten og
+                    spolen bevega seg og skapa sterkare straum.
+                </p>
+                <a href="../images/content/microphone.jpg" class="right" style="margin-right: auto;">
+                    <img src="../images/content/microphone.jpg" alt="Bilde av ein mikrofon">
+                    <br>
+                    <i>Mikrofoner kan ta opp lyd</i>
+                </a>
+                <audio src="../sound/prosjektIT2019_sound2.mp3" controls></audio>
+                <p>
+                    Når ei datamaskin eller anna lagringseinheit mottar dei elekstrike signala sett den dei opp i ein tabell
+                    for å kartleggja korleis styrken auker eller minskar, so når dei skal brukast til å spela lyd vil
+                    datamaskina vita kor mykje trykk ein skal bruka for å få den lyden. Lyden vert alikevel ikkje 100% lik, noko
+                    ein høyrer godt når ein høyrer ein eigen stemme frå ein høgtalar.
+                </p>
+                <p>
+                    Lyd kan også ha komprimering for å minska plassen som kreves for å lagra file. På tabellen som vart nevnt
+                    ovenfor so kan datamaskina måla kor stor forskjell det er frå den forrige målinge, og lagra den istaden.
+                    Dermed må ikkje datamaskina lagra alle målingane, og kan heller lagra forskjellen og kalkulera korleis
+                    tabellen vert sjåande ut når ein åpner fila att.
+                </p>
+            </section>
+        </section>
+
+    </main>
+
+    <footer class="s-btn" id="support-button">
+        <img class="s-btn" src="../images/base/support.png" alt="">
+        <h3 class="s-btn">Support</h3>
+    </footer>
+    <section class="support-chat">
+
+        <section class="support-chat-top">
+            <img src="../images/base/exitmark.png" class="close-support-chat" alt="">
+        </section>
+
+        <article id="txtMeldinger"></article>
+
+        <form id="skjema">
+
+            <input type="text" id="inpAvsender" required placeholder="Namn">
+
+            <input type="text" id="inpMening" required placeholder="Melding">
+
+            <button type="submit" class="button">OK</button>
+
+        </form>
+
+    </section>
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+             https://firebase.google.com/docs/web/setup#config-web-app -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDFcFebf7srGUuxLgZ1nsmsiIYUx1epPJU",
+            authDomain: "prosjekt3-618a9.firebaseapp.com",
+            databaseURL: "https://prosjekt3-618a9.firebaseio.com",
+            projectId: "prosjekt3-618a9",
+            storageBucket: "prosjekt3-618a9.appspot.com",
+            messagingSenderId: "72131199521",
+            appId: "1:72131199521:web:c3748c44971e606c"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <script>
+        let database = firebase.database();
+
+        let meldinger = database.ref("meldinger");
+
+        let skjema = document.getElementById("skjema");
+
+        let inpAvsender = document.getElementById("inpAvsender");
+
+        let inpMening = document.getElementById("inpMening");
+
+        let txtMeldinger = document.getElementById("txtMeldinger");
+
+        function visMelding(snapshot) {
+
+            let melding = snapshot.val();
+
+            let meldingTekst = `<p> <b>${melding.avsender}: </b> <i>${melding.tekst}</i> </p>`;
+
+            txtMeldinger.innerHTML = txtMeldinger.innerHTML + meldingTekst;
+
+        }
+
+        function regNyMelding(evt) {
+
+            evt.preventDefault();
+
+            let nyMelding = {
+
+                avsender: inpAvsender.value,
+
+                tekst: inpMening.value
+
+            };
+
+            meldinger.push(nyMelding);
+
+            inpMening.value = "";
+
+        }
+
+        meldinger.on("child_added", visMelding);
+
+        skjema.onsubmit = regNyMelding;
+    </script>
+</body>
+
+</html>

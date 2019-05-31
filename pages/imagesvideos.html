@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Alex prosjekt 3 - Images and video</title>
+
+    <link rel="icon" href="../images/base/js_logo.png">
+
+    <link rel="stylesheet" href="../styles/common/body.css">
+    <link rel="stylesheet" href="../styles/common/header.css">
+    <link rel="stylesheet" href="../styles/common/main.css">
+    <link rel="stylesheet" href="../styles/common/footer.css">
+    <link rel="stylesheet" href="../styles/common/navigation.css">
+
+    <style>
+        .gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 10px;
+        }
+    
+        .gallery img {
+            width: 200px;
+            height: 200px;
+        }
+    
+        @media screen and (max-width: 800px) {
+            .gallery {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 10px;
+            }
+        }
+    </style>
+
+    <script src="../scripts/window_onclick.js"></script>
+</head>
+
+<body>
+
+    <img class="background-image" src="../images/base/background.png" alt="Error">
+
+    <header>
+        <a href="../images/base/title.png"><img src="../images/base/title.png" alt="Error: Tittel-bilde mangler"
+                style="margin-top: 10px; margin-left: 10px; width: 60px; height: 60px;"></a>
+        <h1 class="title"><a href="../index.html" style="text-decoration: none; color: white;">Online IT-education</a>
+        </h1>
+        <h1 class="header-animation">_</h1>
+
+        <img class="dropdown-button" src="../images/base/nav_icon.png" alt="Meny-knapp" title="Meny">
+
+        <section class="dropdown-container">
+            <div class="closenav"><img src="../images/base/exitmark.png" alt=""></div>
+            <a href="../index.html" class="top-link">Startside</a>
+            <div class="separator"></div>
+            <a href="binary.html">Binære tall</a>
+            <div class="separator"></div>
+            <a href="bitbyte.html">Bits og Bytes</a>
+            <div class="separator"></div>
+            <a href="imagesvideos.html">Bilder og Video</a>
+            <div class="separator"></div>
+            <a href="sound.html">Lyd</a>
+        </section>
+    </header>
+
+    <main>
+
+        <section class="ark">
+
+            <section class="column">
+
+                <h1 style="align-self: center; font-size: 34px; margin-top: 10px;">Bilder</h1>
+                <audio src="../sound/prosjektIT2019_image1.mp3" controls></audio>
+                <p>
+                    Bilder er ein av filtypane man ofte finner på ein datamaskin. Eit bilder består av mangfoldige pixlar
+                    med ulike fargar som utgjer formar i det store bildet. Når ein datamaskin lagrar eit bilde må kvar pixel
+                    lagrast ved hjelp av bits og bytes. Alle pixlane vert lagra med verdiar på som avgjer fargane. Eit eksempel
+                    er RGB (Red, Green, Blue) fargekodar, der verdiane vil avgjera kor mykje av kvar farge det skal være, og fargane
+                    vil blanda seg og danna ein anna farge.
+                </p>
+                <a href="../images/content/image.jpg" style="margin-right: auto;" class="right">
+                    <img src="../images/content/image.jpg" alt="Illustrasjon av bildelagring">
+                    <br>
+                    <i>Farge til bits</i>
+                </a>
+                <audio src="../sound/prosjektIT2019_image2.mp3" controls></audio>
+                <p>
+                    I dag har me fleire ulike typar filformat for eit bilde på ei datamaskin. Me har for eksempel
+                    png, jpg, gif og png-8. Grunnen til at me har fleire er at dei har alle ulikskapar som gjer dei egna for
+                    diverse ting.
+                </p>
+                <p>
+                    JPG har det me kallar ei destruktiv komprimering. Dette vil seie at dersom bildet som vert
+                    lagra har fleir identiske pixlar attmed ein annan, som f.eks:
+                    [ (200,200,200) (200,200,200) (200,200,200) (230,210,200) ],
+                    so kan JPG formatet komprimera desse identiske ved å sette eit antallsnummer foran fargekodelagringa. Det
+                    vil då sjå sånn ut: [ 3(200,200,200) (230,210,200) ]. Ved å gjera dette sparar ein mykje lagringsplass. Ulempa med
+                    dette er
+                    at pixlane på eit bilde kan verta so identiske at bildekvaliteten går ned fordi ein ser pixlane betre.
+                </p>
+                <p>
+                    PNG har det me kaller tapsfri kompresjon, altså bildet vil lagre alle fargekodane til pixlane separat, uansett
+                    om dei er identiske med sidemannen. Dette gjer at bildekvaliteten aukar, men det gjer og at plassauken vert større
+                    for bildet.
+                </p>
+
+                <h1 style="margin-top: 50px; align-self: center; font-size: 34px;">Galleri</h1>
+                <section class="gallery">
+                    <a href="../images/content/binary_green.jpg"><img src="../images/content/binary_green.jpg" alt="Binærkode"></a>
+                    <a href="../images/content/bits.jpg"><img src="../images/content/bits.jpg" alt="Bits"></a>
+                    <a href="../images/content/bitsogbytes.png"><img src="../images/content/bitsogbytes.png" alt="Bits og Bytes"></a>
+                    <a href="../images/content/bytes.jpg"><img src="../images/content/bytes.jpg" alt="Bytes"></a>
+                    <a href="../images/content/harddrive.jpg"><img src="../images/content/harddrive.jpg" alt="Harddisk"></a>
+                    <a href="../images/content/image.jpg"><img src="../images/content/image.jpg" alt="Bilde"></a>
+                </section>
+
+                <h1 style="margin-top: 70px; align-self: center; font-size: 34px;">Video</h1>
+                <p>
+                    Ein video er ein samling av bilder som vert avspelt i veldig høg hastigheit,
+                    ofte i lag med lyd.
+                </p>
+                <video src="../videos/video.mp4" width="300" height="200" controls></video>
+            </section>
+
+        </section>
+
+    </main>
+
+    <footer class="s-btn" id="support-button">
+        <img class="s-btn" src="../images/base/support.png" alt="">
+        <h3 class="s-btn">Support</h3>
+    </footer>
+    <section class="support-chat">
+
+        <section class="support-chat-top">
+            <img src="../images/base/exitmark.png" class="close-support-chat" alt="">
+        </section>
+
+        <article id="txtMeldinger"></article>
+
+        <form id="skjema">
+
+            <input type="text" id="inpAvsender" required placeholder="Namn">
+
+            <input type="text" id="inpMening" required placeholder="Melding">
+
+            <button type="submit" class="button">OK</button>
+
+        </form>
+
+    </section>
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+             https://firebase.google.com/docs/web/setup#config-web-app -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDFcFebf7srGUuxLgZ1nsmsiIYUx1epPJU",
+            authDomain: "prosjekt3-618a9.firebaseapp.com",
+            databaseURL: "https://prosjekt3-618a9.firebaseio.com",
+            projectId: "prosjekt3-618a9",
+            storageBucket: "prosjekt3-618a9.appspot.com",
+            messagingSenderId: "72131199521",
+            appId: "1:72131199521:web:c3748c44971e606c"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <script>
+        let database = firebase.database();
+
+        let meldinger = database.ref("meldinger");
+
+        let skjema = document.getElementById("skjema");
+
+        let inpAvsender = document.getElementById("inpAvsender");
+
+        let inpMening = document.getElementById("inpMening");
+
+        let txtMeldinger = document.getElementById("txtMeldinger");
+
+        function visMelding(snapshot) {
+
+            let melding = snapshot.val();
+
+            let meldingTekst = `<p> <b>${melding.avsender}: </b> <i>${melding.tekst}</i> </p>`;
+
+            txtMeldinger.innerHTML = txtMeldinger.innerHTML + meldingTekst;
+
+        }
+
+        function regNyMelding(evt) {
+
+            evt.preventDefault();
+
+            let nyMelding = {
+
+                avsender: inpAvsender.value,
+
+                tekst: inpMening.value
+
+            };
+
+            meldinger.push(nyMelding);
+
+            inpMening.value = "";
+
+        }
+
+        meldinger.on("child_added", visMelding);
+
+        skjema.onsubmit = regNyMelding;
+    </script>
+</body>
+
+</html>
