@@ -17,3 +17,19 @@ header {
 header .title {
     margin-left: 20px;
 }
+
+.header-animation {
+    margin-left: 5px;
+    animation-name: dissappear;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes dissappear {
+    25% {color:rgb(44, 44, 44);}
+    50%{color:white;}
+    750% {color:rgb(44, 44, 44);}
+    100%{color:white;}
+    
+    
+}

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alex prosjekt 3 - Home</title>
 
-    <link rel="icon" href="">
+    <link rel="icon" href="images/base/js_logo.png">
 
     <link rel="stylesheet" href="styles/common/body.css">
     <link rel="stylesheet" href="styles/common/header.css">
@@ -23,8 +23,9 @@
     <img class="background-image" src="images/base/background.png" alt="Error">
 
     <header>
-
-        <h1 class="title">Online IT Education</h1>
+        <a href="images/base/title.png"><img src="images/base/title.png" alt="Error: Tittel-bilde mangler" style="margin-top: 10px; margin-left: 10px; width: 60px; height: 60px;"></a>
+        <h1 class="title">Online IT-education</h1>
+        <h1 class="header-animation">_</h1>
 
         <img class="dropdown-button" src="images/base/nav_icon.png" alt="Meny-knapp" title="Meny">
 
@@ -65,24 +66,114 @@
                     er for å skape ein
                     moglegheit for samarbeid eller støtte for dette kapittellet.
                 </p>
+                <p>
+                    (Legg merke til at det er ein bitteliten Keyframes animasjon oppe i tittelen på sida)
+                </p>
             </article>
 
             <article>
 
             </article>
 
+            <section class="column">
+                <h3>GAS-analyse</h3>
+                <p>
+                    <b>Goal:</b><br>
+                    Denne sida har som mål å undervise om det grunnlegende binære systemet som alle digitale
+                    plattformer og aparater bruker i dag. Den har som mål å undervise dei som ikkje kan noko
+                    som helst fra før, altså dei me ser på som "grunn-elevar". 
+                </p>
+                <p>
+                    <b>Audience:</b><br>
+                    Denne sidas publikum blir folk som ønsker å vita korleis ei datamaskin funker, og sidan
+                    innholdet baserer seg på det som blir skrevet i læreboka fra CappelenDamm, kan me annta
+                    at ein stor del av publikum er IT1-elevar. Det blir derfor vektlagt simplisitet og
+                    grunndig, detaljert forklaring av tema. Det er viktig at det er lett å finne fram til rett
+                    innformasjon og navigere seg vidare til neste tema.
+                </p>
+                <p>
+                    <b>Contents:</b><br>
+                    Innholdet på denne sida består av grunnleggende informasjon om det binære systemet.
+                    Det er lagt inn diverse bilder, videoer, lydfiler, linkar og animasjonar
+                    for å gjera sida lettare å bruka.
+                </p>
+            </section>
+
+            <section class="column">
+                <h3>Kravspesifikasjonar</h3>
+                <p>
+                    På denne sida er det brukt mange standard HTML-taggar som video, audio, section, article,
+                    header, main, footer. Det er brukt CSS for stilering av sida, og CSS handterer også
+                    at sida tilpasser seg ettersom sida blir sett på på eit mindre aparat som ein mobiltelefon.
+                    Det er også brukt JavaScript for å håndtere navigasjons-menyar, samt chatten nede på sida.
+                    Det er brukt Firebase for lagring av chatten. Det er og tatt hensyn til dei syn. Det er
+                    opplesing av tekst på sida i audio-tagger for dem som ikkje ser so godt (på denne sida
+                    har eg berre gjort det med nokre tekstar, ettersom det er tidkrevande å gjera det på alt,
+                    og denne sida er kun for eksempel på korleis ein kan lage ei nettside.), det er og tatt
+                    hensyn til kontrastar. Det er unngått bruk av store områder med heilt kvit farge, ettersom
+                    det kan være skadeleg for auget og sida er også designet i ein mørkare farge.
+                </p>
+
+            </section>
+
             <section class="row">
                 <article>
                     <h3>Wireframes</h3>
-                    <p>text</p>
+                    <p>
+                        Her finner du wireframes av alle sidene. Alle sidene følger samme hovedstil,
+                        så hovedstilen gjelder for alle sidene.
+                        Eit wireframe er eit planleggingsdokument som gjer det lettare å bygga 
+                        ei nettsida seinare, ettersom man med wireframen har ein plantegning.
+                    </p>
                 </article>
 
                 <article class="image right">
-                    <a href="images/base/wireframe_main.png"><img src="images/base/wireframe_main.png"
+                    <a href="images/content/wireframe_main.png"><img src="images/content/wireframe_main.png"
                             alt="Bilde av Wireframe"></a>
-                    <p>Wireframe til sideplanlegging.</p>
+                    <p>Wireframe til hovedstil av sidene.</p>
+
                 </article>
             </section>
+
+            <section class="row">
+
+                <article>
+                    <h3>Datamodell</h3>
+                    <p>
+                        IT-support skal ha ein datamodell for korleis dei skal lagre problemskildringar,
+                        kunder, status på problemet og ansatte som jobber på det. Då foreslår eg at me
+                        lagar 3 "boksar" for lagring. 
+                    </p>
+                    <p>
+                        Ein for sjølve problemet. Her lagrar me info som
+                        kunden som rapporterte dette, som er ein framadnøkkel, ansatte som jobber på problemet
+                        som er framadnøkkel/nøkklar, prioriteten på problemet og status.
+                    </p>
+                    <p>
+                        Neste boks blir for kunder i bedrifta. Ein kan lagre ganske mykje info om kundar,
+                        som gjer det gunstig at dei får sin eigen boks. Ein kan lagre ting som navn,
+                        bustad, kontaktinfo, kva problemer dei har rapportert, kva slags tjeneste dei er 
+                        kunde for, osv.
+                    </p>
+                    <p>
+                        Siste boksen blir for dei ansatte. For som med kundar kan man lagre mykje om ein
+                        ansatt, som programmeringsspråk dei spesialiserer seg i, problemer dei jobber
+                        med å utbedre, navn, bustad, kontaktinfo, arbeidstider, osv.
+                    </p>
+                </article>
+
+                <article class="image right">
+                    <a href="images/content/datamodell.png"><img src="images/content/datamodell.png" alt="Bilde av datamodell."></a>
+                    <p>Bilde av datamodell-løysing for IT-support.</p>
+                </article>
+
+            </section>
+
+            <section class="column">
+                <h3 style="align-self: left; justify-self: left; margin-left: 0px; margin-right: auto;">Kjelder:</h3>
+                <a href="https://www.google.com/imgres?imgurl=https%3A%2F%2Fpreviews.123rf.com%2Fimages%2Fsaphatthachat%2Fsaphatthachat1803%2Fsaphatthachat180300162%2F98031934-vector-pixel-art-book-open-isolated-cartoon.jpg&imgrefurl=https%3A%2F%2Fwww.123rf.com%2Fphoto_98031934_stock-vector-vector-pixel-art-book-open-isolated-cartoon.html&docid=heR9E8UjaxVXwM&tbnid=yyC1EHpoLN0phM%3A&vet=10ahUKEwjSldTSyMTiAhVnhosKHenVAQ4QMwhKKAkwCQ..i&w=1300&h=1300&bih=625&biw=1366&q=pixelart%20book&ved=0ahUKEwjSldTSyMTiAhVnhosKHenVAQ4QMwhKKAkwCQ&iact=mrc&uact=8">Tittel-bilde</a>
+            </section>
+
         </section>
 
     </main>
